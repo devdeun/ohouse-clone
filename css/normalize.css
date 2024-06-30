@@ -201,6 +201,12 @@ button,
   -webkit-appearance: button;
 }
 
+a,
+button:enabled {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
 /**
  * Remove the inner border and padding in Firefox.
  */
