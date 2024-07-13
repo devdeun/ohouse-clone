@@ -47,9 +47,17 @@
   background-color: transparent;
 }
 
-.top-banner-close-btn .close-icon {
-  color: #fff;
-  font-size: 28px;
+.top-banner-close-btn::before {
+  position: absolute;
+  left: 10px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  mask-image: url("../assets/icons/Close.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 @media screen and (width < 768px) {
