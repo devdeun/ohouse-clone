@@ -1,3 +1,11 @@
+/* font */
+@font-face {
+  font-family: "OhouseIcon";
+  src: url("https://assets.ohou.se/design-system/d8923b386a66fd50.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* common */
 .wrapper {
   max-width: 1256px;
@@ -15,6 +23,14 @@
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
   white-space: nowrap;
+}
+
+.icon {
+  display: inline-block;
+  font-family: "OhouseIcon";
+  font-size: 24px;
+  line-height: 1;
+  vertical-align: top;
 }
 
 /* top banner */
@@ -47,17 +63,8 @@
   background-color: transparent;
 }
 
-.top-banner-close-btn::before {
-  position: absolute;
-  left: 10px;
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  mask-image: url("../assets/icons/Close.svg");
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
+.top-banner-close-btn .icon {
+  color: #fff;
 }
 
 /* header */
@@ -104,6 +111,10 @@
   border: 1px solid #dadde0;
   border-radius: 4px;
   margin-right: 4px;
+}
+
+.header-search .icon {
+  color: #828c94;
 }
 
 .header-search:hover,
@@ -159,11 +170,13 @@
   outline: none;
 }
 
-.header-posting img {
+.header-posting .icon {
   position: absolute;
-  right: 10px;
+  right: 14px;
   top: 50%;
   transform: translateY(-50%);
+  color: #fff;
+  font-size: 18px;
 }
 
 @media screen and (width < 768px) {
