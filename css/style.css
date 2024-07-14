@@ -8,6 +8,7 @@
 
 /* common */
 .wrapper {
+  position: relative;
   max-width: 1256px;
   padding: 0 60px;
   margin: 0 auto;
@@ -31,6 +32,10 @@
   font-size: 24px;
   line-height: 1;
   vertical-align: top;
+}
+
+.mobile-only {
+  display: none;
 }
 
 /* top banner */
@@ -81,8 +86,15 @@
   align-items: center;
 }
 
+.header-left {
+  flex-shrink: 0;
+}
+
 .header-right {
   gap: 14px;
+  flex-grow: 1;
+  justify-content: end;
+  min-width: 0;
 }
 
 .header-category-list {
@@ -105,7 +117,10 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  width: 280px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 300px;
+  max-width: 300px;
   height: 40px;
   padding: 0 14px;
   border: 1px solid #dadde0;
@@ -123,6 +138,7 @@
 }
 
 .header-search input {
+  width: 100%;
   margin-top: 2px;
   border: 0;
   outline: none;
@@ -135,6 +151,13 @@
 
 .header-search:has(input:focus) {
   border: 1px solid #35c5f0;
+}
+
+.header-search-button {
+  display: none;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 .header-user-menu {
@@ -170,17 +193,90 @@
   outline: none;
 }
 
+.header-posting-btn:hover {
+  background-color: #009fce;
+}
+
 .header-posting .icon {
   position: absolute;
-  right: 14px;
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
   color: #fff;
   font-size: 18px;
 }
 
+.header-cart,
+.header-user-menu,
+.header-posting {
+  flex-shrink: 0;
+}
+
+@media screen and (width < 1256px) {
+  .desktop-full-only {
+    display: none;
+  }
+
+  .header-right {
+    max-width: 476px;
+  }
+
+  .header-search {
+    flex-basis: 195px;
+    min-width: 195px;
+  }
+}
+
+@media screen and (width < 1024px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+
+  .header-category-list {
+    margin-left: 32px;
+  }
+
+  .header-search {
+    display: none;
+  }
+
+  .header-search-button {
+    display: block;
+  }
+}
+
 @media screen and (width < 768px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
   .top-banner {
     display: none;
+  }
+
+  .header-sticky .wrapper {
+    height: 50px;
+    background: #ffffff;
+    border-bottom: 1px solid #eaedef;
+  }
+
+  .header-logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header-mobile-menu-btn {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
   }
 }

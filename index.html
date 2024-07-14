@@ -68,11 +68,15 @@
                 </svg>
               </a>
             </div>
-            <ul class="header-category-list">
+            <ul class="header-category-list desktop-only">
               <li class="active"><a href="javascript:void(0)">커뮤니티</a></li>
               <li><a href="javascript:void(0)">쇼핑</a></li>
               <li><a href="javascript:void(0)">인테리어/생활</a></li>
             </ul>
+            <button class="header-mobile-menu-btn mobile-only">
+              <span class="icon _menu_24"></span>
+            </button>
+            <nav class="header-mobile-menu mobile-only"></nav>
           </div>
 
           <div class="header-right">
@@ -80,15 +84,22 @@
               <span class="icon _search_24"></span>
               <input type="text" placeholder="통합검색" />
             </div>
+            <button class="header-search-button">
+              <span class="icon _search_24"></span>
+            </button>
             <div class="header-cart">
-              <span class="icon _cart_24"></span>
+              <a href="javascript:void(0)" aria-label="장바구니">
+                <span class="icon _cart_24"></span>
+              </a>
             </div>
-            <ul class="header-user-menu">
+            <ul class="header-user-menu desktop-only">
               <li><a href="javascript:void(0)">로그인</a></li>
               <li><a href="javascript:void(0)">회원가입</a></li>
-              <li><a href="javascript:void(0)">고객센터</a></li>
+              <li class="desktop-full-only">
+                <a href="javascript:void(0)">고객센터</a>
+              </li>
             </ul>
-            <div class="header-posting">
+            <div class="header-posting desktop-only">
               <button class="header-posting-btn">글쓰기</button>
               <span class="icon _chevron_down_18"></span>
             </div>
