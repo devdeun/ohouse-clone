@@ -8,9 +8,25 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
-  line-height: 1.15; /* 1 */
+  line-height: 1; /* 1 */
+  letter-spacing: -0.3px;
   -webkit-text-size-adjust: 100%; /* 2 */
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html,
+a,
+button {
+  color: #2f3438;
+  font-weight: 300;
 }
 
 /* Sections
@@ -75,6 +91,7 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**
@@ -354,4 +371,10 @@ template {
 
 [hidden] {
   display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
