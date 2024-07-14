@@ -86,6 +86,8 @@
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #eaedef;
 }
 
 .header-left,
@@ -410,7 +412,6 @@
 
   .mobile-navbar-subcategory > .mobile-navbar-category-item {
     width: 100%;
-    height: 40px;
     padding: 0px 14px 0px 42px;
     margin: 4px 0px 0px;
     line-height: 40px;
@@ -433,6 +434,35 @@
 
   .mobile-navbar-subcategory .mobile-navbar-category-item button {
     padding-left: unset;
+    font-weight: 300;
+  }
+
+  .mobile-navbar-subcategory
+    .mobile-navbar-subcategory
+    .mobile-navbar-category-item {
+    padding-left: 0;
+  }
+
+  .mobile-navbar-subcategory .mobile-navbar-category-item:has(button) {
+    padding: 0;
+  }
+
+  .mobile-navbar-subcategory .mobile-navbar-category-item:has(button) a,
+  .mobile-navbar-subcategory .mobile-navbar-category-item:has(button) button {
+    padding: 0 14px 0 42px;
+  }
+
+  .mobile-navbar-subcategory .mobile-navbar-category-item:has(button):hover {
+    background-color: #fff;
+  }
+
+  .mobile-navbar-subcategory
+    .mobile-navbar-category-item:has(button):hover
+    button {
+    font-weight: 600;
+  }
+
+  .mobile-navbar-subcategory .mobile-navbar-category-item:has(button):hover a {
     font-weight: 300;
   }
 
