@@ -38,6 +38,14 @@
   display: none;
 }
 
+.modal-bg {
+  z-index: 100;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(33, 38, 41, 0.5);
+  cursor: pointer;
+}
+
 /* top banner */
 .top-banner {
   position: relative;
@@ -278,5 +286,197 @@
     padding: 0;
     border: 0;
     background-color: transparent;
+  }
+
+  .header-mobile-navbar-container {
+    display: none;
+  }
+
+  .header-mobile-navbar-container.active {
+    display: block;
+  }
+
+  .header-mobile-navbar-wrapper {
+    z-index: 999;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 270px;
+    padding: 26px 16px;
+    text-align: left;
+    background: rgb(255, 255, 255);
+    overflow-y: auto;
+  }
+
+  .mobile-navbar-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-app-download-btn {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    padding: 0px 6px;
+    border: 0;
+    border-radius: 4px;
+    color: #35c5f0;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: transparent;
+  }
+
+  .header-app-download-btn .icon {
+    font-size: 14px;
+    margin-left: 4px;
+  }
+
+  .mobile-navbar-signin-signup-container {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px 0px;
+    border-bottom: 1px solid #eaedef;
+  }
+
+  .mobile-navbar-signin-signup-container .signin,
+  .mobile-navbar-signin-signup-container .signup {
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-weight: 600;
+    border: 1px solid #35c5f0;
+  }
+
+  .mobile-navbar-signin-signup-container .signin {
+    color: #35c5f0;
+  }
+
+  .mobile-navbar-signin-signup-container .signup {
+    background-color: #35c5f0;
+    color: #fff;
+  }
+
+  .header-mobile-navbar {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eaedef;
+  }
+
+  .mobile-navbar-category-item {
+    margin-top: 4px;
+  }
+
+  .mobile-navbar-category-item button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 40px;
+    padding: 0px 40px 0px 14px;
+    margin: 0px;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+    text-align: left;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    white-space: nowrap;
+    background-color: #fff;
+  }
+
+  .mobile-navbar-category-item button ._chevron_thick_down_12 {
+    position: absolute;
+    right: 14px;
+    font-size: 12px;
+    transition: transform 0.3s;
+  }
+
+  .mobile-navbar-category-item button:hover {
+    background-color: #f7f9fa;
+  }
+
+  .mobile-navbar-category-item button.active ._chevron_thick_down_12 {
+    transform: rotate(-180deg);
+  }
+
+  .mobile-navbar-subcategory > .mobile-navbar-category-item {
+    width: 100%;
+    height: 40px;
+    padding: 0px 14px 0px 42px;
+    margin: 4px 0px 0px;
+    line-height: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-navbar-subcategory .mobile-navbar-category-item a {
+    display: block;
+  }
+
+  .mobile-navbar-subcategory .mobile-navbar-category-item:hover {
+    background-color: #f7f9fa;
+  }
+
+  .mobile-navbar-subcategory .mobile-navbar-category-item:hover a {
+    font-weight: 600;
+  }
+
+  .mobile-navbar-subcategory .mobile-navbar-category-item button {
+    padding-left: unset;
+    font-weight: 300;
+  }
+
+  .header-mobile-user-menu {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eaedef;
+  }
+
+  .header-mobile-user-menu a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    height: 40px;
+    padding: 0px 14px;
+    margin-top: 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .header-mobile-user-menu a:hover {
+    background-color: #f7f9fa;
+  }
+
+  .mobile-navbar-footer {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .mobile-navbar-footer li {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 4px;
+    line-height: 18px;
+  }
+
+  .mobile-navbar-footer li a {
+    color: #000;
+  }
+
+  .mobile-navbar-footer li:hover {
+    background-color: #f7f9fa;
   }
 }
