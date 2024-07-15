@@ -81,13 +81,16 @@
 }
 
 /* header */
+.header-sticky {
+  background-color: #fff;
+  border-bottom: 1px solid #eaedef;
+}
+
 .header-sticky .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  background-color: #fff;
-  border-bottom: 1px solid #eaedef;
 }
 
 .header-left,
@@ -274,8 +277,6 @@
 
   .header-sticky .wrapper {
     height: 50px;
-    background: #ffffff;
-    border-bottom: 1px solid #eaedef;
   }
 
   .header-logo-container {
